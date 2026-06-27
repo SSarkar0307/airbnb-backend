@@ -35,6 +35,11 @@ exports.postAddToFavourite = async (req, res, next) => {
   try {
     const homeId = req.params.homeId;
     const userId = res.locals.userId;
+    const exists = await Favourite.findOne({userId, homeId});
+    if(exists){
+      res.status(500).json({message: "Already Exists in Favourites."});
+      return;
+    }
     const favhome = new Favourite({ userId, homeId });
 
     await favhome.save();

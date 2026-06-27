@@ -7,13 +7,13 @@ const favouriteSchema = mongoose.Schema({
   userId:{
     type: mongoose.Schema.Types.ObjectId,
     ref: User,
-    unique: true
+    required: true
   },
   
   homeId:{
     type: mongoose.Schema.Types.ObjectId,
     ref: Home,
-    unique: true
+    required: true
   }
 })
 

@@ -1,3 +1,5 @@
 node_modules/
 utils/databaseUtil.js
 public/images/
+public/
+tailwind.config.js

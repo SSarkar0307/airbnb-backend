@@ -1,6 +1,6 @@
 # Airbnb Backend (v2)
 
-A Node.js + Express + MongoDB backend for an Airbnb-style app. v2 turns the single-host setup into a multitenant platform with bookings and role-based access.
+A Node.js + Express + MongoDB backend for a Property Tenancy app. v2 turns the single-host setup into a multitenant platform with bookings and role-based access.
 
 ## Features
 
@@ -47,8 +47,8 @@ To use MongoDB Atlas instead of the bundled Mongo, override `MONGODB_URI` in `do
 To run just the image against an external database:
 
 ```bash
-docker build -t airbnb-backend .
-docker run -p 3001:3001 -e MONGODB_URI="<your-mongo-uri>" -e SESSION_SECRET="<random>" airbnb-backend
+docker build -t property-tenancy-backend .
+docker run -p 3001:3001 -e MONGODB_URI="<your-mongo-uri>" -e SESSION_SECRET="<random>" property-tenancy-backend
 ```
 
 ### Without Docker

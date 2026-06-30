@@ -1,4 +1,4 @@
-# Airbnb Backend — API Reference (v2)
+# Property Tenancy Backend — API Reference (v2)
 
 Base URL: `http://localhost:3001`
 

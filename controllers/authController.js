@@ -118,3 +118,13 @@ exports.isHost = async (req, res, next) => {
     }
     else next();
 }
+
+exports.isSuperAdmin = async (req, res, next) => {
+    const userId = req.session.userId;
+
+    const { userType } = await User.findById(userId);
+    if (userType !== 'superAdmin') {
+        return res.status(403).json({ message: "Only for Super Admin" });
+    }
+    else next();
+}

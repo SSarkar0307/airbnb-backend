@@ -12,6 +12,7 @@ const MongoDBStore = require('connect-mongodb-session')(session)
 const storeRouter = require("./routes/storeRouter")
 const hostRouter = require("./routes/hostRouter")
 const authRouter = require("./routes/authRouter")
+const adminRouter = require("./routes/adminRouter")
 const rootDir = require("./utils/pathUtil");
 const errorsController = require("./controllers/errors");
 const uri  = require('./utils/databaseUtil');
@@ -42,6 +43,7 @@ app.use("/auth", authRouter);
 
 app.use(storeRouter);
 app.use("/host", hostRouter);
+app.use("/admin", adminRouter);
 
 
 

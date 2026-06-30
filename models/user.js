@@ -19,7 +19,7 @@ const User = mongoose.Schema({
   },
   userType: {
     type: String,
-    enum: ['guest', 'host'],
+    enum: ['guest', 'host', 'superAdmin'],
     default: 'guest'
   },
 })

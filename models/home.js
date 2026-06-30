@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const User = require('./user')
 
 
 const homeSchema = new mongoose.Schema({
@@ -6,7 +7,12 @@ const homeSchema = new mongoose.Schema({
   price: {type: Number, required: true},
   location: {type: String, required: true},
   rating: {type: String, required: true},
-  photoUrl: String
+  photoUrl: String,
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: User,
+    required: true
+  }
 })
 
 module.exports= mongoose.model("Home", homeSchema);

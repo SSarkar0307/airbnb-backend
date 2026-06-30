@@ -1,4 +1,4 @@
-# Airbnb Backend (v2)
+# Property-Tenancy Backend (v2)
 
 A Node.js + Express + MongoDB backend for an Airbnb-style app. v2 turns the single-host setup into a multitenant platform with bookings and role-based access.
 

@@ -26,7 +26,7 @@ const store = new MongoDBStore({
 });
 
 app.use(session({
-  secret: "secret_key",
+  secret: process.env.SESSION_SECRET || "secret_key",
   resave: false,
   saveUninitialized: false,
   store
@@ -51,7 +51,7 @@ app.use(express.static(path.join(rootDir, 'public')))
 
 app.use(errorsController.pageNotFound);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 serverStart= async ()=>{
   try{
 
